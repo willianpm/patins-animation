@@ -9,7 +9,7 @@ section.gallery {
   }
 
   & header span {
-    font: 500 var(--text-sm)/1.5 var(--ff-base);
+    font: 500 var(--text-sm) / 1.5 var(--ff-base);
   }
 
   & img {
@@ -33,9 +33,18 @@ section.gallery {
     overflow: hidden;
     line-height: 0;
 
+    animation: image-appear linear backwards;
+    animation-timeline: view();
+    animation-range: 100px 300px;
+
+    &[data-delay] {
+      animation-range: 150px 350px;
+    }
+
     & > img {
       height: 25rem;
       object-fit: cover;
+      transition: scale 500ms;
     }
 
     &:hover {
@@ -43,7 +52,7 @@ section.gallery {
         scale: 1.1;
       }
 
-      figcation {
+      figcaption {
         transform: translateY(0);
       }
     }
@@ -92,8 +101,11 @@ section.gallery {
       border-radius: 50%;
     }
   }
+}
 
-  & figcaption img {
-    width: 2rem;
+@keyframes image-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
