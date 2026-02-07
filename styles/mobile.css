@@ -1,0 +1,60 @@
+@media (max-width: 80rem) {
+  section.hero {
+    flex-direction: column-reverse;
+  }
+  section.hero .buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  section.hero .button {
+    width: 100%;
+    max-width: 25rem;
+    justify-content: center;
+  }
+
+  section.gallery .content {
+    display: flex;
+    flex-direction: column;
+    grid-template-areas: none;
+    gap: 2rem;
+  }
+
+  section.gallery figure {
+    grid-area: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  section.gallery figure > img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 2.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+  }
+
+  footer nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  footer .social-links {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  footer .logo {
+    margin-bottom: 1rem;
+  }
+}
