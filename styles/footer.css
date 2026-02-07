@@ -57,5 +57,47 @@ footer {
   }
 
   & .social-links {
+    display: flex;
+    align-items: center;
+
+    & a {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 5rem;
+
+      position: relative;
+
+      &:hover::before {
+        scale: 1;
+      }
+
+      & img {
+        width: 1.5rem;
+        height: auto;
+      }
+
+      &::before {
+        content: "";
+
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+
+        background: var(--snitap-sun);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        scale: 0;
+        transition: scale 200ms;
+      }
+    }
   }
 }
